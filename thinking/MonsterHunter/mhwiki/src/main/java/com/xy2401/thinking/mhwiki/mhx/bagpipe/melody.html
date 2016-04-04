@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>笛子效果</title>
+<style>
+
+    /** **/
+    .purple{
+        color: purple;
+    }
+    .blue{
+        color: darkblue;
+    }
+    .orange{
+        color: #f88400;
+    }
+
+    /**白 白 white **/
+    .c1{
+        color: white;
+    }
+    /**紫 紫 white **/
+    .c2{
+        color: white;
+    }
+    /**赤 红 Red **/
+    .c3{
+        color: white;
+    }
+    /**黄 黄 yello **/
+    .c4{
+        color: white;
+    }
+    /**青 蓝 white **/
+    .c5{
+        color: white;
+    }
+    /**空 蓝 white **/
+    .c6{
+        color: white;
+    }
+    /**绿 蓝 white **/
+    .c6{
+        color: white;
+    }
+    /**橙 蓝 white **/
+    .c6{
+        color: white;
+    }
+
+	
+</style>
+<script>
+
+    var colors = [['purple','blue','orange',],['紫♪','青♪','橙♪']];
+
+    window.onload= function(){
+
+        var _table = document.getElementById("dizitable").innerHTML;
+
+        for(var i=0;i<colors[0].length;i++){
+            _table=   _table.replace(new RegExp(colors[1][i],"gm"),'<span class=\''+colors[0][i]+'\'>♪</span>');
+        }
+
+        document.getElementById("dizitable").innerHTML= _table;
+
+    }
+</script>
+</head>
+<body>
+
+ <table>
+
+     <tr><td colspan="2"> 霸重笛库奈哈乌卡姆</td></tr>
+     <tr> <td>♪♪</td> <td>强化自己 </td> </tr>
+     <tr> <td>♪♪♪♪</td> <td>防御力强化 【大】</td> </tr>
+     <tr> <td>♪♪♪♪</td> <td> 攻击力 &防御力强化【小】</td> </tr>
+     <tr> <td>♪♪♪♪</td> <td>攻击力&防御力强化【小】 </td> </tr>
+     <tr> <td>♪♪♪</td> <td>风压无效  </td> </tr>
+     <tr> <td>♪♪♪♪</td> <td>耐力减少无效【大】 </td> </tr>
+
+ </table>
+
+ <table id="dizitable">
+
+
+
+     <tr><td colspan="2"></td></tr>
+     <tr> <td> </td> <td> </td></tr>
+     <tr> <td> </td> <td> </td></tr>
+     <tr> <td> </td> <td> </td></tr>
+     <tr> <td> </td> <td> </td></tr>
+     <tr> <td> </td> <td> </td></tr>
+     <tr> <td> </td> <td> </td></tr>
+     <tr> <td> </td> <td> </td></tr>
+     <tr> <td> </td> <td> </td></tr>
+
+
+
+     <tr><td colspan="2"> 霸重笛库奈哈乌卡姆(紫青橙)(紫♪青♪橙♪)</td></tr>
+     <tr> <td>紫♪紫♪</td> <td>强化自己 </td> </tr>
+     <tr> <td>紫♪青♪青♪紫♪</td> <td>防御力强化 【大】</td> </tr>
+     <tr> <td>橙♪青♪紫♪青♪</td> <td>攻击力 &防御力强化【小】</td> </tr>
+     <tr> <td>紫♪青♪橙♪橙♪</td> <td>攻击力&防御力强化【小】 </td> </tr>
+     <tr> <td>青♪青♪橙♪</td> <td>风压无效  </td> </tr>
+     <tr> <td>紫♪橙♪青♪橙♪</td> <td>耐力减少无效【大】 </td> </tr>
+
+ </table>
+
+<table>
+
+    <tr> <td>演奏順</td><td>効果</td><td>秒数()</td><td>重ねがけ効果</td> </tr>
+
+    <tr> <td> 白白</td> <td>移動速度アップ </td> <td>180(240) </td> <td> はじかれ無効</td> </tr>
+
+    <tr> <td> 紫紫 </td> <td> 移動速度アップ </td> <td>  180(240)</td> <td> はじかれ無効 </td>  </tr>
+    <tr> <td> 白赤赤  </td> <td> 攻撃力強化【小】 </td> <td>  120(150)</td> <td>  </td>  </tr>
+    <tr> <td> 白青青 </td> <td> 防御力強化【小】 </td> <td> 120(150) </td> <td>  </td>  </tr>
+    <tr> <td>赤青白  </td> <td> 体力増加【小】 </td> <td>  </td> <td>  </td>  </tr>
+    <tr> <td> 青青赤 </td> <td>風圧無効  </td> <td> 180(210) </td> <td> 風圧完全無効 </td>  </tr>
+    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
+    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
+    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
+    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
+    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
+    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
+    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
+    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
+    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
+    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
+
+
+
+    </table>
+
+
+
+</body>
+</html>

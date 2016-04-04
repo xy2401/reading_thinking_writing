@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>简单转换</title>
+<style>
+#resultSpan span,#resultDiv span{
+display: block;
+}
+#srcAddress,#newAddress{
+width: 300px;
+height: 500px;
+}
+</style>
+</head>
+<body onload="load()">
+ 
+<table id="table1">
+<tr> <td>功能说明:</td>
+        <td> 简单将偶行添加到奇行后面用逗号(,)隔开<br/>
+               百度翻译选择双语对照,奇数行为原文，偶数行为翻译，为了方便转换csv文件<br/>
+
+          </td>
+</tr>
+<tr><td colspan="2">
+
+<button onclick="getMainPoints()"> 转换</button>
+
+ 
+</td>
+</tr>
+<tr>
+     <td>需转换地址<span id="infoSpan"> </span></td>
+     <td>转换后地址 </td>
+</tr>
+
+<tr>
+    <td valign="top"><textarea id="srcAddress" > </textarea></td>
+    <td valign="top"> <textarea id="newAddress" > </textarea> </td>
+</tr>
+</table>
+
+<script>
+
+function getMainPoints(){
+
+	var addresses = document.getElementById("srcAddress").value.split("\n");//换行分割
+	var address = "";
+
+	 var newAddressValue="";
+	 for(var i=0;i<addresses.length;i++){//第一次循环生成 响应的回调函数
+		 address = addresses[i].trim();//出去左右括号
+		 if(i%2==0){
+			 newAddressValue += address;
+		 }else{
+			 newAddressValue += ','+address+'\n';
+		 }
+	 }
+	document.getElementById("newAddress").value = newAddressValue;
+
+}
+
+
+</script>
+</body>
+</html>
