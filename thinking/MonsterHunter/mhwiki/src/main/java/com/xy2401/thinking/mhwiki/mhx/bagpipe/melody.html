@@ -22,31 +22,31 @@
     }
     /**紫 紫 white **/
     .c2{
-        color: white;
+        color: #f010f0;
     }
     /**赤 红 Red **/
     .c3{
-        color: white;
+        color: #f80000;
     }
     /**黄 黄 yello **/
     .c4{
-        color: white;
+        color: #f8fc00;
     }
     /**青 蓝 white **/
     .c5{
-        color: white;
+        color: #2028f8;
     }
     /**空 蓝 white **/
     .c6{
-        color: white;
+        color: #80c0f8;
     }
     /**绿 蓝 white **/
     .c6{
-        color: white;
+        color: #00fc00;
     }
     /**橙 蓝 white **/
-    .c6{
-        color: white;
+    .c8{
+        color: #f88400;
     }
 
 	
@@ -55,8 +55,7 @@
 
     var colors = [['purple','blue','orange',],['紫♪','青♪','橙♪']];
 
-    window.onload= function(){
-
+    function fn(){
         var _table = document.getElementById("dizitable").innerHTML;
 
         for(var i=0;i<colors[0].length;i++){
@@ -64,8 +63,9 @@
         }
 
         document.getElementById("dizitable").innerHTML= _table;
-
     }
+
+
 </script>
 </head>
 <body>
@@ -110,29 +110,490 @@
 
 <table>
 
-    <tr> <td>演奏順</td><td>効果</td><td>秒数()</td><td>重ねがけ効果</td> </tr>
 
-    <tr> <td> 白白</td> <td>移動速度アップ </td> <td>180(240) </td> <td> はじかれ無効</td> </tr>
+    <tr>
+        <td> 演奏順</td>
+        <td>效果</td><td>秒数()</td><td>重合效果</td>
+    </tr>
+    <tr class=' c1t  c1t '>
+        <td> <span class='c1'>白</span><span class='c1'>白</span><br><span class='c1'>♪</span><span class='c1'>♪</span></td>
+        <td>移动速度提高</td><td>180(240)</td><td>弹刀无效</td>
+    </tr>
+    <tr class=' c2t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c2'>♪</span></td>
+        <td>移动速度提高</td><td>180(240)</td><td>弹刀无效</td>
+    </tr>
+    <tr class=' c1t  c3t  c3t '>
+        <td> <span class='c1'>白</span><span class='c3'>赤</span><span class='c3'>赤</span><br><span class='c1'>♪</span><span class='c3'>♪</span><span class='c3'>♪</span></td>
+        <td>攻击力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c1t  c5t  c5t '>
+        <td> <span class='c1'>白</span><span class='c5'>青</span><span class='c5'>青</span><br><span class='c1'>♪</span><span class='c5'>♪</span><span class='c5'>♪</span></td>
+        <td>防御力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c3t  c5t  c1t '>
+        <td> <span class='c3'>赤</span><span class='c5'>青</span><span class='c1'>白</span><br><span class='c3'>♪</span><span class='c5'>♪</span><span class='c1'>♪</span></td>
+        <td>体力增加【小】</td>
+    </tr>
+    <tr class=' c5t  c5t  c3t '>
+        <td> <span class='c5'>青</span><span class='c5'>青</span><span class='c3'>赤</span><br><span class='c5'>♪</span><span class='c5'>♪</span><span class='c3'>♪</span></td>
+        <td>风压无效</td><td>180(210)</td><td>风压完全无效</td>
+    </tr>
+    <tr class=' c1t  c3t  c3t '>
+        <td> <span class='c1'>白</span><span class='c3'>赤</span><span class='c3'>赤</span><br><span class='c1'>♪</span><span class='c3'>♪</span><span class='c3'>♪</span></td>
+        <td>攻击力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c1t  c1t '>
+        <td> <span class='c1'>白</span><span class='c1'>白</span><br><span class='c1'>♪</span><span class='c1'>♪</span></td>
+        <td>体力回复【小】</td>
+    </tr>
+    <tr class=' c3t  c1t '>
+        <td> <span class='c3'>赤</span><span class='c1'>白</span><br><span class='c3'>♪</span><span class='c1'>♪</span></td>
+        <td>回复速度【小】</td><td>120(150)</td><td> </td>
+    </tr>
+    <tr class=' c1t  c3t  c3t '>
+        <td> <span class='c1'>白</span><span class='c3'>赤</span><span class='c3'>赤</span><br><span class='c1'>♪</span><span class='c3'>♪</span><span class='c3'>♪</span></td>
+        <td>攻击力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c1t  c1t '>
+        <td> <span class='c1'>白</span><span class='c1'>白</span><br><span class='c1'>♪</span><span class='c1'>♪</span></td>
+        <td>体力回复【小】</td>
+    </tr>
+    <tr class=' c3t  c1t '>
+        <td> <span class='c3'>赤</span><span class='c1'>白</span><br><span class='c3'>♪</span><span class='c1'>♪</span></td>
+        <td>回复速度【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c1t  c3t  c3t '>
+        <td> <span class='c1'>白</span><span class='c3'>赤</span><span class='c3'>赤</span><br><span class='c1'>♪</span><span class='c3'>♪</span><span class='c3'>♪</span></td>
+        <td>攻击力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c3t  c3t  c6t '>
+        <td> <span class='c3'>赤</span><span class='c3'>赤</span><span class='c6'>空</span><br><span class='c3'>♪</span><span class='c3'>♪</span><span class='c6'>♪</span></td>
+        <td>炎热无效</td>
+    </tr>
+    <tr class=' c6t  c3t  c6t '>
+        <td> <span class='c6'>空</span><span class='c3'>赤</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c3'>♪</span><span class='c6'>♪</span></td>
+        <td>寒冷无效</td>
+    </tr>
+    <tr class=' c6t  c6t  c6t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c6'>♪</span></td>
+        <td>耐雪人状态</td><td>180(240)</td>
+    </tr>
+    <tr class=' c6t  c6t  c3t  c1t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c3'>赤</span><span class='c1'>白</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c3'>♪</span><span class='c1'>♪</span></td>
+        <td>听觉保护【小】</td><td>180(210)</td><td>听觉保护【大】</td>
+    </tr>
+    <tr class=' c1t  c3t  c3t '>
+        <td> <span class='c1'>白</span><span class='c3'>赤</span><span class='c3'>赤</span><br><span class='c1'>♪</span><span class='c3'>♪</span><span class='c3'>♪</span></td>
+        <td>攻击力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c4t  c3t  c1t '>
+        <td> <span class='c4'>黄</span><span class='c3'>赤</span><span class='c1'>白</span><br><span class='c4'>♪</span><span class='c3'>♪</span><span class='c1'>♪</span></td>
+        <td>火属性防御强化【小】火异常【小】無効</td>
+    </tr>
+    <tr class=' c4t  c4t  c4t '>
+        <td> <span class='c4'>黄</span><span class='c4'>黄</span><span class='c4'>黄</span><br><span class='c4'>♪</span><span class='c4'>♪</span><span class='c4'>♪</span></td>
+        <td>高周波</td>
+    </tr>
+    <tr class=' c1t  c5t  c5t '>
+        <td> <span class='c1'>白</span><span class='c5'>青</span><span class='c5'>青</span><br><span class='c1'>♪</span><span class='c5'>♪</span><span class='c5'>♪</span></td>
+        <td>防御力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c1t  c1t '>
+        <td> <span class='c1'>白</span><span class='c1'>白</span><br><span class='c1'>♪</span><span class='c1'>♪</span></td>
+        <td>体力回复【小】</td>
+    </tr>
+    <tr class=' c1t  c5t '>
+        <td> <span class='c1'>白</span><span class='c5'>青</span><br><span class='c1'>♪</span><span class='c5'>♪</span></td>
+        <td>耐力减少无效【小】</td>
+    </tr>
+    <tr class=' c5t  c5t '>
+        <td> <span class='c5'>青</span><span class='c5'>青</span><br><span class='c5'>♪</span><span class='c5'>♪</span></td>
+        <td>风压无效</td><td>180(210)</td><td>风压完全无效</td>
+    </tr>
+    <tr class=' c5t  c1t  c5t '>
+        <td> <span class='c5'>青</span><span class='c1'>白</span><span class='c5'>青</span><br><span class='c5'>♪</span><span class='c1'>♪</span><span class='c5'>♪</span></td>
+        <td>体力回復【小】&解毒</td>
+    </tr>
+    <tr class=' c1t  c5t  c5t '>
+        <td> <span class='c1'>白</span><span class='c5'>青</span><span class='c5'>青</span><br><span class='c1'>♪</span><span class='c5'>♪</span><span class='c5'>♪</span></td>
+        <td>防御力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c1t  c5t  c6t '>
+        <td> <span class='c1'>白</span><span class='c5'>青</span><span class='c6'>空</span><br><span class='c1'>♪</span><span class='c5'>♪</span><span class='c6'>♪</span></td>
+        <td>千里眼</td>
+    </tr>
+    <tr class=' c1t  c6t  c5t '>
+        <td> <span class='c1'>白</span><span class='c6'>空</span><span class='c5'>青</span><br><span class='c1'>♪</span><span class='c6'>♪</span><span class='c5'>♪</span></td>
+        <td>耐力减少无效【小】</td>
+    </tr>
+    <tr class=' c5t  c5t  c6t '>
+        <td> <span class='c5'>青</span><span class='c5'>青</span><span class='c6'>空</span><br><span class='c5'>♪</span><span class='c5'>♪</span><span class='c6'>♪</span></td>
+        <td>风压无效</td><td>180(210)</td><td>风压完全无效</td>
+    </tr>
+    <tr class=' c6t  c6t  c6t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c6'>♪</span></td>
+        <td>耐雪人状态</td><td>180(240)</td>
+    </tr>
+    <tr class=' c1t  c5t  c5t '>
+        <td> <span class='c1'>白</span><span class='c5'>青</span><span class='c5'>青</span><br><span class='c1'>♪</span><span class='c5'>♪</span><span class='c5'>♪</span></td>
+        <td>防御力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c1t  c4t  c5t '>
+        <td> <span class='c1'>白</span><span class='c4'>黄</span><span class='c5'>青</span><br><span class='c1'>♪</span><span class='c4'>♪</span><span class='c5'>♪</span></td>
+        <td>耐力减少无效【小】</td>
+    </tr>
+    <tr class=' c4t  c5t  c1t '>
+        <td> <span class='c4'>黄</span><span class='c5'>青</span><span class='c1'>白</span><br><span class='c4'>♪</span><span class='c5'>♪</span><span class='c1'>♪</span></td>
+        <td>氷耐性強化【小】氷やられ【小】無効</td>
+    </tr>
+    <tr class=' c4t  c4t  c4t '>
+        <td> <span class='c4'>黄</span><span class='c4'>黄</span><span class='c4'>黄</span><br><span class='c4'>♪</span><span class='c4'>♪</span><span class='c4'>♪</span></td>
+        <td>高周波</td>
+    </tr>
+    <tr class=' c1t  c1t '>
+        <td> <span class='c1'>白</span><span class='c1'>白</span><br><span class='c1'>♪</span><span class='c1'>♪</span></td>
+        <td>体力回复【小】</td>
+    </tr>
+    <tr class=' c1t  c6t '>
+        <td> <span class='c1'>白</span><span class='c6'>空</span><br><span class='c1'>♪</span><span class='c6'>♪</span></td>
+        <td>体力回復【中】&消臭</td>
+    </tr>
+    <tr class=' c6t  c6t  c6t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c6'>♪</span></td>
+        <td>耐雪人状态</td><td>180(240)</td>
+    </tr>
+    <tr class=' c6t  c6t  c1t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c1'>白</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c1'>♪</span></td>
+        <td>听觉保护【小】</td><td>180(210)</td><td>听觉保护【大】</td>
+    </tr>
+    <tr class=' c1t  c1t '>
+        <td> <span class='c1'>白</span><span class='c1'>白</span><br><span class='c1'>♪</span><span class='c1'>♪</span></td>
+        <td>体力回复【小】</td>
+    </tr>
+    <tr class=' c4t '>
+        <td> <span class='c4'>黄</span><br><span class='c4'>♪</span></td>
+        <td>回复速度【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c4t  c1t '>
+        <td> <span class='c4'>黄</span><span class='c1'>白</span><br><span class='c4'>♪</span><span class='c1'>♪</span></td>
+        <td>雷耐性強化【小】&雷やられ【小】無効</td><td></td><td>更に雷耐性強化&雷やられ完全無効</td>
+    </tr>
+    <tr class=' c4t  c4t  c4t '>
+        <td> <span class='c4'>黄</span><span class='c4'>黄</span><span class='c4'>黄</span><br><span class='c4'>♪</span><span class='c4'>♪</span><span class='c4'>♪</span></td>
+        <td>高周波</td>
+    </tr>
+    <tr class=' c1t  c4t  c6t '>
+        <td> <span class='c1'>白</span><span class='c4'>黄</span><span class='c6'>空</span><br><span class='c1'>♪</span><span class='c4'>♪</span><span class='c6'>♪</span></td>
+        <td>龍耐性强化【小】</td>
+    </tr>
+    <tr class=' c6t  c6t  c6t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c6'>♪</span></td>
+        <td>耐雪人状态</td><td>180(240)</td>
+    </tr>
+    <tr class=' c6t  c6t  c4t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c4'>黄</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c4'>♪</span></td>
+        <td>耐震</td>
+    </tr>
+    <tr class=' c6t  c4t  c1t '>
+        <td> <span class='c6'>空</span><span class='c4'>黄</span><span class='c1'>白</span><br><span class='c6'>♪</span><span class='c4'>♪</span><span class='c1'>♪</span></td>
+        <td>麻痹无效</td>
+    </tr>
+    <tr class=' c4t  c6t  c1t '>
+        <td> <span class='c4'>黄</span><span class='c6'>空</span><span class='c1'>白</span><br><span class='c4'>♪</span><span class='c6'>♪</span><span class='c1'>♪</span></td>
+        <td>水耐性强化【小】＆水异常无效</td><td></td><td>更加水耐性強化＆水异常完全無効</td>
+    </tr>
+    <tr class=' c4t  c6t  c4t  c6t '>
+        <td> <span class='c4'>黄</span><span class='c6'>空</span><span class='c4'>黄</span><span class='c6'>空</span><br><span class='c4'>♪</span><span class='c6'>♪</span><span class='c4'>♪</span><span class='c6'>♪</span></td>
+        <td>属性攻击力强化</td>
+    </tr>
+    <tr class=' c4t  c4t  c4t '>
+        <td> <span class='c4'>黄</span><span class='c4'>黄</span><span class='c4'>黄</span><br><span class='c4'>♪</span><span class='c4'>♪</span><span class='c4'>♪</span></td>
+        <td>高周波</td>
+    </tr>
+    <tr class=' c2t  c3t  c5t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c3'>赤</span><span class='c5'>青</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c3'>♪</span><span class='c5'>♪</span><span class='c2'>♪</span></td>
+        <td>攻击力强化【大】</td><td>90(120)</td><td>更加攻击力强化</td>
+    </tr>
+    <tr class=' c2t  c5t  c5t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c5'>青</span><span class='c5'>青</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c5'>♪</span><span class='c5'>♪</span><span class='c2'>♪</span></td>
+        <td>防御力强化【大】</td><td>90(120)</td><td>更加防御力强化</td>
+    </tr>
+    <tr class=' c3t  c5t  c3t  c2t '>
+        <td> <span class='c3'>赤</span><span class='c5'>青</span><span class='c3'>赤</span><span class='c2'>紫</span><br><span class='c3'>♪</span><span class='c5'>♪</span><span class='c3'>♪</span><span class='c2'>♪</span></td>
+        <td>体力增加【大】</td>
+    </tr>
+    <tr class=' c5t  c5t  c3t '>
+        <td> <span class='c5'>青</span><span class='c5'>青</span><span class='c3'>赤</span><br><span class='c5'>♪</span><span class='c5'>♪</span><span class='c3'>♪</span></td>
+        <td>风压无效</td><td>180(210)</td><td>风压完全无效</td>
+    </tr>
+    <tr class=' c2t  c3t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c3'>赤</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c3'>♪</span><span class='c2'>♪</span></td>
+        <td>攻击力强化【大】</td><td>90(120)</td><td>更加攻击力强化</td>
+    </tr>
+    <tr class=' c2t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c2'>♪</span></td>
+        <td>体力回复【小】</td>
+    </tr>
+    <tr class=' c3t  c2t '>
+        <td> <span class='c3'>赤</span><span class='c2'>紫</span><br><span class='c3'>♪</span><span class='c2'>♪</span></td>
+        <td>回复速度【大】</td>
+    </tr>
+    <tr class=' c2t  c3t  c6t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c3'>赤</span><span class='c6'>空</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c3'>♪</span><span class='c6'>♪</span><span class='c2'>♪</span></td>
+        <td>攻击力强化【大】</td><td>90(120)</td><td>更加攻击力强化</td>
+    </tr>
+    <tr class=' c3t  c3t  c6t '>
+        <td> <span class='c3'>赤</span><span class='c3'>赤</span><span class='c6'>空</span><br><span class='c3'>♪</span><span class='c3'>♪</span><span class='c6'>♪</span></td>
+        <td>炎热无效</td><td></td><td>地形伤害也无效</td>
+    </tr>
+    <tr class=' c6t  c3t  c6t '>
+        <td> <span class='c6'>空</span><span class='c3'>赤</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c3'>♪</span><span class='c6'>♪</span></td>
+        <td>寒冷无效</td>
+    </tr>
+    <tr class=' c6t  c6t  c3t  c2t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c3'>赤</span><span class='c2'>紫</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c3'>♪</span><span class='c2'>♪</span></td>
+        <td>听觉保护【小】</td><td>180(210)</td><td>听觉保护【大】</td>
+    </tr>
+    <tr class=' c6t  c6t  c6t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c6'>♪</span></td>
+        <td>耐雪人状态</td><td>180(240)</td>
+    </tr>
+    <tr class=' c2t  c3t  c4t '>
+        <td> <span class='c2'>紫</span><span class='c3'>赤</span><span class='c4'>黄</span><br><span class='c2'>♪</span><span class='c3'>♪</span><span class='c4'>♪</span></td>
+        <td>攻击力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c3t  c4t  c2t '>
+        <td> <span class='c3'>赤</span><span class='c4'>黄</span><span class='c2'>紫</span><br><span class='c3'>♪</span><span class='c4'>♪</span><span class='c2'>♪</span></td>
+        <td>攻击力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c4t  c2t  c3t '>
+        <td> <span class='c4'>黄</span><span class='c2'>紫</span><span class='c3'>赤</span><br><span class='c4'>♪</span><span class='c2'>♪</span><span class='c3'>♪</span></td>
+        <td>攻击力强化【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c4t  c3t  c2t '>
+        <td> <span class='c4'>黄</span><span class='c3'>赤</span><span class='c2'>紫</span><br><span class='c4'>♪</span><span class='c3'>♪</span><span class='c2'>♪</span></td>
+        <td>火耐性强化【大】＆火异常完全無効</td>
+    </tr>
+    <tr class=' c4t  c4t  c4t '>
+        <td> <span class='c4'>黄</span><span class='c4'>黄</span><span class='c4'>黄</span><br><span class='c4'>♪</span><span class='c4'>♪</span><span class='c4'>♪</span></td>
+        <td>高周波</td>
+    </tr>
+    <tr class=' c2t  c5t  c5t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c5'>青</span><span class='c5'>青</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c5'>♪</span><span class='c5'>♪</span><span class='c2'>♪</span></td>
+        <td>防御力强化【大】</td><td>90(120)</td><td>更加防御力强化</td>
+    </tr>
+    <tr class=' c2t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c2'>♪</span></td>
+        <td>体力回复【小】</td>
+    </tr>
+    <tr class=' c2t  c5t '>
+        <td> <span class='c2'>紫</span><span class='c5'>青</span><br><span class='c2'>♪</span><span class='c5'>♪</span></td>
+        <td>耐力减少无效【大】</td>
+    </tr>
+    <tr class=' c5t  c5t '>
+        <td> <span class='c5'>青</span><span class='c5'>青</span><br><span class='c5'>♪</span><span class='c5'>♪</span></td>
+        <td>风压无效</td><td>180(210)</td><td>风压完全无效</td>
+    </tr>
+    <tr class=' c5t  c2t  c5t '>
+        <td> <span class='c5'>青</span><span class='c2'>紫</span><span class='c5'>青</span><br><span class='c5'>♪</span><span class='c2'>♪</span><span class='c5'>♪</span></td>
+        <td>体力回復【中】&解毒</td>
+    </tr>
+    <tr class=' c2t  c5t  c5t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c5'>青</span><span class='c5'>青</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c5'>♪</span><span class='c5'>♪</span><span class='c2'>♪</span></td>
+        <td>防御力强化【大】</td><td>90(120)</td><td>更加防御力强化</td>
+    </tr>
+    <tr class=' c2t  c5t  c6t '>
+        <td> <span class='c2'>紫</span><span class='c5'>青</span><span class='c6'>空</span><br><span class='c2'>♪</span><span class='c5'>♪</span><span class='c6'>♪</span></td>
+        <td>千里眼</td>
+    </tr>
+    <tr class=' c2t  c6t  c5t  c6t '>
+        <td> <span class='c2'>紫</span><span class='c6'>空</span><span class='c5'>青</span><span class='c6'>空</span><br><span class='c2'>♪</span><span class='c6'>♪</span><span class='c5'>♪</span><span class='c6'>♪</span></td>
+        <td>耐力减少无效【大】</td>
+    </tr>
+    <tr class=' c5t  c5t  c6t '>
+        <td> <span class='c5'>青</span><span class='c5'>青</span><span class='c6'>空</span><br><span class='c5'>♪</span><span class='c5'>♪</span><span class='c6'>♪</span></td>
+        <td>风压无效</td><td>180(210)</td><td>风压完全无效</td>
+    </tr>
+    <tr class=' c6t  c5t  c2t '>
+        <td> <span class='c6'>空</span><span class='c5'>青</span><span class='c2'>紫</span><br><span class='c6'>♪</span><span class='c5'>♪</span><span class='c2'>♪</span></td>
+        <td>昏厥无效</td>
+    </tr>
+    <tr class=' c6t  c6t  c6t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c6'>♪</span></td>
+        <td>耐雪人状态</td><td>180(240)</td>
+    </tr>
+    <tr class=' c2t  c5t  c5t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c5'>青</span><span class='c5'>青</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c5'>♪</span><span class='c5'>♪</span><span class='c2'>♪</span></td>
+        <td>防御力强化【大】</td><td>90(120)</td><td>更加防御力强化</td>
+    </tr>
+    <tr class=' c2t  c4t  c5t '>
+        <td> <span class='c2'>紫</span><span class='c4'>黄</span><span class='c5'>青</span><br><span class='c2'>♪</span><span class='c4'>♪</span><span class='c5'>♪</span></td>
+        <td>耐力减少无效【大】</td>
+    </tr>
+    <tr class=' c5t  c5t  c4t  c2t '>
+        <td> <span class='c5'>青</span><span class='c5'>青</span><span class='c4'>黄</span><span class='c2'>紫</span><br><span class='c5'>♪</span><span class='c5'>♪</span><span class='c4'>♪</span><span class='c2'>♪</span></td>
+        <td>风压完全无效</td>
+    </tr>
+    <tr class=' c4t  c5t  c2t '>
+        <td> <span class='c4'>黄</span><span class='c5'>青</span><span class='c2'>紫</span><br><span class='c4'>♪</span><span class='c5'>♪</span><span class='c2'>♪</span></td>
+        <td>冰耐性强化【大】＆氷异常完全無効</td>
+    </tr>
+    <tr class=' c4t  c4t  c4t '>
+        <td> <span class='c4'>黄</span><span class='c4'>黄</span><span class='c4'>黄</span><br><span class='c4'>♪</span><span class='c4'>♪</span><span class='c4'>♪</span></td>
+        <td>高周波</td>
+    </tr>
+    <tr class=' c2t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c2'>♪</span></td>
+        <td>体力回复【小】</td>
+    </tr>
+    <tr class=' c2t  c6t '>
+        <td> <span class='c2'>紫</span><span class='c6'>空</span><br><span class='c2'>♪</span><span class='c6'>♪</span></td>
+        <td>体力回复【大】</td>
+    </tr>
+    <tr class=' c6t  c6t  c2t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c2'>紫</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c2'>♪</span></td>
+        <td>听觉保护【大】</td>
+    </tr>
+    <tr class=' c6t  c6t  c6t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c6'>♪</span></td>
+        <td>耐雪人状态</td><td>180(240)</td>
+    </tr>
+    <tr class=' c2t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c2'>♪</span></td>
+        <td>体力回复【小】</td>
+    </tr>
+    <tr class=' c2t  c4t '>
+        <td> <span class='c2'>紫</span><span class='c4'>黄</span><br><span class='c2'>♪</span><span class='c4'>♪</span></td>
+        <td>属性攻击力强化</td>
+    </tr>
+    <tr class=' c4t  c2t  c4t '>
+        <td> <span class='c4'>黄</span><span class='c2'>紫</span><span class='c4'>黄</span><br><span class='c4'>♪</span><span class='c2'>♪</span><span class='c4'>♪</span></td>
+        <td>精灵王的保佑</td>
+    </tr>
+    <tr class=' c4t '>
+        <td> <span class='c4'>黄</span><br><span class='c4'>♪</span></td>
+        <td>回复速度【小】</td><td>120(150)</td>
+    </tr>
+    <tr class=' c4t  c2t '>
+        <td> <span class='c4'>黄</span><span class='c2'>紫</span><br><span class='c4'>♪</span><span class='c2'>♪</span></td>
+        <td>雷耐性强化【大】＆雷异常完全無効</td>
+    </tr>
+    <tr class=' c4t  c4t  c4t '>
+        <td> <span class='c4'>黄</span><span class='c4'>黄</span><span class='c4'>黄</span><br><span class='c4'>♪</span><span class='c4'>♪</span><span class='c4'>♪</span></td>
+        <td>高周波</td>
+    </tr>
+    <tr class=' c2t  c4t  c6t '>
+        <td> <span class='c2'>紫</span><span class='c4'>黄</span><span class='c6'>空</span><br><span class='c2'>♪</span><span class='c4'>♪</span><span class='c6'>♪</span></td>
+        <td>龍耐性强化【大】</td>
+    </tr>
+    <tr class=' c4t  c6t  c2t '>
+        <td> <span class='c4'>黄</span><span class='c6'>空</span><span class='c2'>紫</span><br><span class='c4'>♪</span><span class='c6'>♪</span><span class='c2'>♪</span></td>
+        <td>水耐性強化【大】＆</td>
+    </tr>
+    <tr class=' c4t  c6t  c4t  c6t '>
+        <td> <span class='c4'>黄</span><span class='c6'>空</span><span class='c4'>黄</span><span class='c6'>空</span><br><span class='c4'>♪</span><span class='c6'>♪</span><span class='c4'>♪</span><span class='c6'>♪</span></td>
+        <td>属性攻击力强化</td>
+    </tr>
+    <tr class=' c4t  c4t  c4t '>
+        <td> <span class='c4'>黄</span><span class='c4'>黄</span><span class='c4'>黄</span><br><span class='c4'>♪</span><span class='c4'>♪</span><span class='c4'>♪</span></td>
+        <td>高周波</td>
+    </tr>
+    <tr class=' c6t  c6t  c6t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c6'>♪</span></td>
+        <td>耐雪人状态</td><td>180(240)</td>
+    </tr>
+    <tr class=' c6t  c6t  c4t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c4'>黄</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c4'>♪</span></td>
+        <td>耐震</td>
+    </tr>
+    <tr class=' c6t  c4t  c2t '>
+        <td> <span class='c6'>空</span><span class='c4'>黄</span><span class='c2'>紫</span><br><span class='c6'>♪</span><span class='c4'>♪</span><span class='c2'>♪</span></td>
+        <td>麻痹无效</td>
+    </tr>
+    <tr class=' c2t  c8t  c8t  c3t '>
+        <td> <span class='c2'>紫</span><span class='c8'>橙</span><span class='c8'>橙</span><span class='c3'>赤</span><br><span class='c2'>♪</span><span class='c8'>♪</span><span class='c8'>♪</span><span class='c3'>♪</span></td>
+        <td>攻击力强化【大】</td><td>90(120)</td>
+    </tr>
+    <tr class=' c3t  c8t  c3t  c2t '>
+        <td> <span class='c3'>赤</span><span class='c8'>橙</span><span class='c3'>赤</span><span class='c2'>紫</span><br><span class='c3'>♪</span><span class='c8'>♪</span><span class='c3'>♪</span><span class='c2'>♪</span></td>
+        <td>硬直无效</td>
+    </tr>
+    <tr class=' c8t  c3t  c8t '>
+        <td> <span class='c8'>橙</span><span class='c3'>赤</span><span class='c8'>橙</span><br><span class='c8'>♪</span><span class='c3'>♪</span><span class='c8'>♪</span></td>
+        <td>全旋律效果延长</td>
+    </tr>
+    <tr class=' c8t  c5t  c2t  c5t '>
+        <td> <span class='c8'>橙</span><span class='c5'>青</span><span class='c2'>紫</span><span class='c5'>青</span><br><span class='c8'>♪</span><span class='c5'>♪</span><span class='c2'>♪</span><span class='c5'>♪</span></td>
+        <td>攻击力＆防御力强化【小】</td><td>120(150)</td><td>更加攻击力＆防御力强化</td>
+    </tr>
+    <tr class=' c2t  c5t  c8t  c8t '>
+        <td> <span class='c2'>紫</span><span class='c5'>青</span><span class='c8'>橙</span><span class='c8'>橙</span><br><span class='c2'>♪</span><span class='c5'>♪</span><span class='c8'>♪</span><span class='c8'>♪</span></td>
+        <td>攻击力＆防御力强化【小】</td><td>120(150)</td><td>更加攻击力＆防御力强化</td>
+    </tr>
+    <tr class=' c2t  c5t  c5t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c5'>青</span><span class='c5'>青</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c5'>♪</span><span class='c5'>♪</span><span class='c2'>♪</span></td>
+        <td>防御力强化【大】</td><td>90(120)</td>
+    </tr>
+    <tr class=' c2t  c8t  c5t  c8t '>
+        <td> <span class='c2'>紫</span><span class='c8'>橙</span><span class='c5'>青</span><span class='c8'>橙</span><br><span class='c2'>♪</span><span class='c8'>♪</span><span class='c5'>♪</span><span class='c8'>♪</span></td>
+        <td>耐力减少无效【大】</td>
+    </tr>
+    <tr class=' c5t  c5t  c8t '>
+        <td> <span class='c5'>青</span><span class='c5'>青</span><span class='c8'>橙</span><br><span class='c5'>♪</span><span class='c5'>♪</span><span class='c8'>♪</span></td>
+        <td>风压完全无效</td>
+    </tr>
+    <tr class=' c2t  c2t '>
+        <td> <span class='c2'>紫</span><span class='c2'>紫</span><br><span class='c2'>♪</span><span class='c2'>♪</span></td>
+        <td>体力回复【小】</td>
+    </tr>
+    <tr class=' c8t  c2t  c8t '>
+        <td> <span class='c8'>橙</span><span class='c2'>紫</span><span class='c8'>橙</span><br><span class='c8'>♪</span><span class='c2'>♪</span><span class='c8'>♪</span></td>
+        <td>会心率UP ＆体力回复【小】</td>
+    </tr>
+    <tr class=' c8t  c8t  c2t '>
+        <td> <span class='c8'>橙</span><span class='c8'>橙</span><span class='c2'>紫</span><br><span class='c8'>♪</span><span class='c8'>♪</span><span class='c2'>♪</span></td>
+        <td>听觉保护【大】</td>
+    </tr>
+    <tr class=' c2t  c4t  c8t  c4t '>
+        <td> <span class='c2'>紫</span><span class='c4'>黄</span><span class='c8'>橙</span><span class='c4'>黄</span><br><span class='c2'>♪</span><span class='c4'>♪</span><span class='c8'>♪</span><span class='c4'>♪</span></td>
+        <td>听觉保护【小】＆风压减轻</td><td>(聴210/風240)</td><td>听觉保护【大】＆风压完全无效</td>
+    </tr>
+    <tr class=' c2t  c8t  c4t  c8t '>
+        <td> <span class='c2'>紫</span><span class='c8'>橙</span><span class='c4'>黄</span><span class='c8'>橙</span><br><span class='c2'>♪</span><span class='c8'>♪</span><span class='c4'>♪</span><span class='c8'>♪</span></td>
+        <td>属性攻击力强化</td><td>(150)</td><td>更加属性攻击力强化</td>
+    </tr>
+    <tr class=' c4t  c4t  c4t '>
+        <td> <span class='c4'>黄</span><span class='c4'>黄</span><span class='c4'>黄</span><br><span class='c4'>♪</span><span class='c4'>♪</span><span class='c4'>♪</span></td>
+        <td>高周波</td>
+    </tr>
+    <tr class=' c4t  c8t  c2t '>
+        <td> <span class='c4'>黄</span><span class='c8'>橙</span><span class='c2'>紫</span><br><span class='c4'>♪</span><span class='c8'>♪</span><span class='c2'>♪</span></td>
+        <td>全属性耐性强化</td><td>(150)</td><td>更全属性耐性强化</td>
+    </tr>
+    <tr class=' c8t  c4t  c4t  c8t '>
+        <td> <span class='c8'>橙</span><span class='c4'>黄</span><span class='c4'>黄</span><span class='c8'>橙</span><br><span class='c8'>♪</span><span class='c4'>♪</span><span class='c4'>♪</span><span class='c8'>♪</span></td>
+        <td>属性异常无效</td><td>(150)</td>
+    </tr>
+    <tr class=' c2t  c8t  c2t  c6t '>
+        <td> <span class='c2'>紫</span><span class='c8'>橙</span><span class='c2'>紫</span><span class='c6'>空</span><br><span class='c2'>♪</span><span class='c8'>♪</span><span class='c2'>♪</span><span class='c6'>♪</span></td>
+        <td>精灵王的保佑</td>
+    </tr>
+    <tr class=' c6t  c2t  c8t  c8t '>
+        <td> <span class='c6'>空</span><span class='c2'>紫</span><span class='c8'>橙</span><span class='c8'>橙</span><br><span class='c6'>♪</span><span class='c2'>♪</span><span class='c8'>♪</span><span class='c8'>♪</span></td>
+        <td>全状态异常无效</td>
+    </tr>
+    <tr class=' c6t  c6t  c6t '>
+        <td> <span class='c6'>空</span><span class='c6'>空</span><span class='c6'>空</span><br><span class='c6'>♪</span><span class='c6'>♪</span><span class='c6'>♪</span></td>
+        <td>耐雪人状态</td><td>180(240)</td>
+    </tr>
+    <tr class=' c6t  c8t  c8t  c2t '>
+        <td> <span class='c6'>空</span><span class='c8'>橙</span><span class='c8'>橙</span><span class='c2'>紫</span><br><span class='c6'>♪</span><span class='c8'>♪</span><span class='c8'>♪</span><span class='c2'>♪</span></td>
+        <td>状态异常攻击强化</td><td></td><td>更加状态异常攻击强化</td>
+    </tr>
 
-    <tr> <td> 紫紫 </td> <td> 移動速度アップ </td> <td>  180(240)</td> <td> はじかれ無効 </td>  </tr>
-    <tr> <td> 白赤赤  </td> <td> 攻撃力強化【小】 </td> <td>  120(150)</td> <td>  </td>  </tr>
-    <tr> <td> 白青青 </td> <td> 防御力強化【小】 </td> <td> 120(150) </td> <td>  </td>  </tr>
-    <tr> <td>赤青白  </td> <td> 体力増加【小】 </td> <td>  </td> <td>  </td>  </tr>
-    <tr> <td> 青青赤 </td> <td>風圧無効  </td> <td> 180(210) </td> <td> 風圧完全無効 </td>  </tr>
-    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
-    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
-    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
-    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
-    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
-    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
-    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
-    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
-    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
-    <tr> <td>  </td> <td>  </td> <td>  </td> <td>  </td>  </tr>
 
-
-
-    </table>
+</table>
 
 
 
