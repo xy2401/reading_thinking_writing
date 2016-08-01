@@ -8,7 +8,7 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
  
-@SpringBootApplication 
+@SpringBootApplication(scanBasePackages="controller") 
 public class AppConfig  extends SpringBootServletInitializer implements EmbeddedServletContainerCustomizer{
  
     public static void main(String[] args) throws Exception {
