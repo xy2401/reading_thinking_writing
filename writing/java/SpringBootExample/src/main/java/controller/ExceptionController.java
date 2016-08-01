@@ -42,7 +42,8 @@ public class ExceptionController {
 	}
 
 	/**
-	 * 抛出异常异常转换 
+	 * 抛出异常异常转换
+	 * 
 	 * @return
 	 * @throws Exception
 	 */
@@ -64,7 +65,8 @@ public class ExceptionController {
 	}
 
 	/**
-	 * 抛出异常异常转换 
+	 * 抛出异常异常转换
+	 * 
 	 * @return
 	 * @throws Exception
 	 */
@@ -72,30 +74,67 @@ public class ExceptionController {
 	@ResponseBody
 	String home3() {
 
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("1", "one");
-		map.put("2", "two");
-		map.put("3", "three");
-
-		map.put("3", ((Integer) ((1 + 2) / 0)).toString());
+		((Integer) ((1 + 2) / 0)).toString();
 
 		return "123";
 	}
-	
-   @ExceptionHandler  
-   @ResponseBody
-   public String exp(HttpServletRequest request, Exception ex) throws JsonProcessingException {  
-         
-	   ex.printStackTrace( );
-      
-      Map<String, Object> map = new HashMap<String, Object>();
-      
-      map.put("result",false);
-      map.put("msg", ex.getMessage());
-      map.put("RequestURL",request.getRequestURL());
-      
-      return mapper.writeValueAsString(map);
-       
-   }
+
+	/**
+	 * 抛出异常异常转换
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping("/4")
+	@ResponseBody
+	String home4() {
+
+		String s = "123";
+		if (true) {
+			s = null;
+		}
+		s.length();
+
+		return "123";
+	}
+
+	@ExceptionHandler(RuntimeException.class)
+	@ResponseBody
+	public String exp(HttpServletRequest request, Exception ex) throws JsonProcessingException {
+
+		ex.printStackTrace();
+
+		Map<String, Object> map = new HashMap<String, Object>();
+
+		map.put("Exception", "RuntimeException");
+		map.put("result", false);
+		map.put("msg", ex.getMessage());
+		map.put("RequestURL", request.getRequestURL());
+
+		if (ex instanceof NullPointerException) {
+			map.put("null", "空指针啊");
+		}
+		
+		return mapper.writeValueAsString(map);
+
+	}
+
+	@ExceptionHandler
+	@ResponseBody
+	public String exp2(HttpServletRequest request, Exception ex) throws JsonProcessingException {
+
+		ex.printStackTrace();
+
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("Exception", "Exception");
+		map.put("result", false);
+		map.put("msg", ex.getMessage());
+		map.put("RequestURL", request.getRequestURL());
+
+
+
+		return mapper.writeValueAsString(map);
+
+	}
 
 }
