@@ -85,6 +85,7 @@ public class ExceptionController {
 	 * @return
 	 * @throws Exception
 	 */
+	@SuppressWarnings("null")
 	@RequestMapping("/4")
 	@ResponseBody
 	String home4() {
