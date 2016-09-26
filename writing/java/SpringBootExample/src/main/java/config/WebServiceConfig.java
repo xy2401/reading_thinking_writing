@@ -2,16 +2,10 @@ package config;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.remoting.jaxws.JaxWsPortProxyFactoryBean;
-import org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter;
-
 import service.AccountService;
-
+	
 @Configuration
 public class WebServiceConfig {
 

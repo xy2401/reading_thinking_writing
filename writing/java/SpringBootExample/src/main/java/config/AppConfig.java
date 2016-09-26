@@ -5,8 +5,7 @@ import org.springframework.boot.autoconfigure.*;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
-import org.springframework.stereotype.*;
-import org.springframework.web.bind.annotation.*;
+ 
  
 //并不能设置扫描根目录所有文件夹。除非放一个一个包下
 //原来来可以通配符啊

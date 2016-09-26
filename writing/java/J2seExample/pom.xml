@@ -116,9 +116,9 @@
 
 	</dependencies>
 
-    <properties>  
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
-      </properties>  
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
 	<build>
 		<plugins>
@@ -132,12 +132,5 @@
 		</plugins>
 	</build>
 
-	<repositories>
-		<!-- 开源中国的maven镜像站 -->
-		<repository>
-			<id>nexus-osc</id>
-			<name>Nexus osc</name>
-			<url>http://maven.oschina.net/content/groups/public/</url>
-		</repository>
-	</repositories>
+
 </project>

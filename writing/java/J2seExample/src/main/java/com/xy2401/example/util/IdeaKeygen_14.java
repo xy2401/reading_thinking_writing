@@ -6,7 +6,9 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.zip.CRC32;
     public class IdeaKeygen_14 {
-      public static short getCRC(String s, int i, byte bytes[]){
+      private static Scanner scanner;
+
+	public static short getCRC(String s, int i, byte bytes[]){
           CRC32 crc32 = new CRC32();
           if (s != null)
           {
@@ -104,7 +106,7 @@ import java.util.zip.CRC32;
 
       public static void main(String[] args){
           System.out.println("请输入用户名:");
-          Scanner scanner = new Scanner(System.in);
+          scanner = new Scanner(System.in);
           String username = scanner.next();
           Random r = new Random();
           System.out.println(MakeKey(username, 0, r.nextInt(100000)));
