@@ -1,5 +1,7 @@
 package com.xy2401.example.concurrency;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -26,12 +28,23 @@ import java.util.concurrent.TimeoutException;
  * @author zhy
  * 
  */
-public class CompletionServiceDemo {
+public class CompletionServiceDemo2 {
 
 	// 阻塞队列
 	final BlockingQueue<Future<Integer>> blockingQueue = null;
 
 	final BlockingQueue<Future<Integer>> blockingQueue1 = new LinkedBlockingDeque<Future<Integer>>();// 类比LinkedList
+
+	final BlockingQueue<Future<Integer>> blockingQueue2 = new ArrayBlockingQueue<Future<Integer>>(AleepingBeauty_NUM);// 类比ArrayList
+
+	final BlockingQueue<Future<Integer>> blockingQueue3 = new PriorityBlockingQueue<Future<Integer>>();// 优先队列
+
+	final BlockingQueue<Future<Integer>> blockingQueue4 = new SynchronousQueue<Future<Integer>>();// 其中每个
+																									// put
+																									// 必须等待一个
+																									// take
+
+	final BlockingQueue<Future<Integer>> blockingQueue5 = new LinkedBlockingDeque<Future<Integer>>(10);
 
 	// 睡美人数量 最大年纪 最长睡眠时间 超时时间
 	public static int AleepingBeauty_NUM = 10, Max_age = 20, Max_Sleep_time = 1000, TimeOut = 500;
@@ -39,27 +52,25 @@ public class CompletionServiceDemo {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 
 		ExecutorService exec = Executors.newFixedThreadPool(AleepingBeauty_NUM);
-
-		CompletionService<Integer> completionService = null;
-
-		completionService = new ExecutorCompletionService<Integer>(exec);
-
+ 
 		long t1 = System.currentTimeMillis();
 
-		for (int i = 0; i < AleepingBeauty_NUM; i++) {
-			// 随机一个 睡美人i 0~20岁 睡眠时间0~1000
-			completionService.submit(
-					new AleepingBeauty("睡美人" + i, new Random().nextInt(20), new Random().nextInt(Max_Sleep_time)));
-		}
+		List<Callable<Integer>> tasks = new ArrayList<Callable<Integer>>();
 
+		for (int i = 0; i < 10; i++) {
+			tasks.add(new AleepingBeauty("睡美人" + i, new Random().nextInt(20), new Random().nextInt(Max_Sleep_time)));
+		}
 		long t2 = System.currentTimeMillis();
 		System.out.println("任务添加完成");
 
+		List<Future<Integer>> results = exec.invokeAll(tasks);
+
+
+	 
 		for (int i = 0; i < 10; i++) {
 			try {
 				// 谁最先执行完成，直接返回
-				Future<Integer> f = completionService.take();
-				f.get(100, TimeUnit.MILLISECONDS);
+			 results.get(i).get(100, TimeUnit.MILLISECONDS) ;
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			} catch (ExecutionException e) {

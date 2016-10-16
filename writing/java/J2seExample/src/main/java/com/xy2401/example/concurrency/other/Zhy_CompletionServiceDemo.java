@@ -1,4 +1,4 @@
-package com.xy2401.example.concurrency;
+package com.xy2401.example.concurrency.other;
 
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
@@ -18,7 +18,7 @@ import java.util.concurrent.LinkedBlockingDeque;
  * @author zhy
  * 
  */
-public class Other_zhy_CompletionServiceDemo {
+public class Zhy_CompletionServiceDemo {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		/**

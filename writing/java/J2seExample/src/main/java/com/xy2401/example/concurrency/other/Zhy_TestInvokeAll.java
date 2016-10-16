@@ -1,4 +1,4 @@
-package com.xy2401.example.concurrency;
+package com.xy2401.example.concurrency.other;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.concurrent.Future;
  * @author xy
  *
  */
-public class Other_zhy_TestInvokeAll {
+public class Zhy_TestInvokeAll {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		ExecutorService exec = Executors.newFixedThreadPool(10);
