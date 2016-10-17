@@ -2,7 +2,6 @@ package com.xy2401.example.concurrency;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletionService;
 import java.util.concurrent.ExecutionException;
@@ -14,6 +13,11 @@ import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+/**
+ * 使用 CompletionService 和  invokeAll 使用  get(500, TimeUnit.MILLISECONDS) 均无法 捕获超过时间异常
+ * @author xy
+ *
+ */
 public class AleepingBeautyDemo {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -117,7 +121,7 @@ public class AleepingBeautyDemo {
 		try {// 可以捕获异常
 			aleepingBeauty.exception = true;
 			System.out.println("exception get( )");
-			exec.invokeAll(tasks).get(0).get( );
+			exec.invokeAll(tasks).get(0).get();
 			System.out.println("exception get() end");
 		} catch (ExecutionException e) {
 			// TODO Auto-generated catch block
